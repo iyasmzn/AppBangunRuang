@@ -34,7 +34,7 @@ h1 {
 }
 .jumbotron {
     height: 50vw;
-    background-image: url('../../../dashboard/image/computer2.jpg');
+    background-image: url('https://images6.alphacoders.com/339/339512.jpg');
     background-size: cover;
     /*position: relative;*/
 }
@@ -127,12 +127,101 @@ h1 {
 /* 2D CSS */
 .datar {
     position: relative;
-    overflow: hidden;
+    /*overflow: hidden;*/
     height: 35vw;
+    /*border: 1px solid red;*/
 }
 .layang {
     position: absolute;
     border-radius: 10px;
     top: 0;bottom: 0;
     width: 100%;
+    display: flex;
+    overflow: hidden;
+    transition: width 1s;
+    right: -1500px;
+}
+.jajar {
+    position: absolute;
+    border-radius: 10px;
+    top: 0;bottom: 0;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    left: -1500px;
+}
+.choice {
+    position: absolute;
+    border-radius: 10px;
+    top: 0;bottom: 0;
+    width: 100%;
+    display: flex;
+    transition: scale 0.5s;
+    /*overflow: hidden;*/
+}
+[class*="image"] {
+    width: 25%;
+    height: 100%;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 4px black;
+}
+.layang-image {
+    background: url('../../../dashboard/image/Kimi no nawa.png');
+    background-size: cover;
+    background-position: left;
+    border-radius: 0px 50px 0px 0px;
+}
+.jajar-image {
+    background: url('../../../dashboard/image/Kimi no nawa.png');
+    background-size: cover;
+    background-position: right;
+    border-radius: 50px 0px 0px 0px;
+}
+.layang-form {
+    width: 75%;
+    height: 100%;
+    box-sizing: border-box;
+}
+.arrows-left {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+.arrows-right {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+.choice-1 {
+    background: url('../../../dashboard/image/background.jpg');
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    border-radius: 50px 50px 0 50px;
+    box-shadow: 0px 0px 4px black;
+}
+.choice-2 {
+    background: url('../../../dashboard/image/background.jpg');
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    border-radius: 50px 50px 50px 0px;
+    box-shadow: 0px 0px 4px black;
+}
+.choice-tag {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family:     
+}
+.choice-1:hover, .choice-2:hover {
+    transform: scale(1.1);
+}
+.choice-tag h1 {
+    font-family: 'Anton', sans-serif;
+    transition: all 0.5s;
+}
+.choice-tag h1:hover {
+    color: tomato;
+    cursor: pointer;
 }
