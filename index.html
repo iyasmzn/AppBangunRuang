@@ -9,7 +9,10 @@
 	<!-- Slick -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"/>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"/><!-- FontGoogle -->
+	<!-- GoogleFonts -->
 	<link href="https://fonts.googleapis.com/css?family=Anton|Satisfy|Alata|Poppins|Quicksand|Ibarra+Real+Nova&display=swap" rel="stylesheet">
+	<!-- AOS -->
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	<!-- CssStyling -->
 	<link rel="stylesheet" type="text/css" href="assets/style.css">
 
@@ -28,29 +31,29 @@
 					<a href="" class="dropdown-item">Bangun Datar ( 2D )</a>
 				</div>
 			</li>
-			<a href="" class="btn btn-md btn-outline-light form-inline">About Us</a>
+			<a href="#profile" onclick="$('#profile').animatescroll({scrollSpeed:1700,easing:'easeInOutSine'});" class="btn btn-md btn-outline-light form-inline">About Us</a>
 		</ul>
 	</nav>
 	<div class="slider-header text-light">
 		<div class="jumbotron jumbotron-fluid text-center">
 			<div class="w-75 box-center my-5">
 				<h1>This is Count APP</h1>
-				<a onclick="$('#card').animatescroll({scrollSpeed:1500,easing:'easeInOutSine'});" class="btn btn-lg btn-outline-danger mt-4">Start Count! <br><i class="fas fa-chevron-down"></i></a>			
+				<a onclick="$('#card').animatescroll({scrollSpeed:1500,easing:'easeInOutSine'});" class="btn btn-lg btn-outline-danger mt-4">Start Count! <br><i class="fas fa-angle-double-down"></i></a>			
 			</div>		
 		</div>
 	</div>
 	<div id="card" class="container text-center">
-		<h1>Object</h1>
+		<h1 data-aos="zoom-out-up">Object</h1>
 		<div>
 			<div class="row justify-content-around">
-				<div class="card col-md-5 bg-light my-5 ">
+				<div data-aos="flip-left" class="card col-md-5 bg-light my-5">
 					<div class="card-image-1"></div>
 					<div class="card-info">
 						<div class="bg-black text-light py-3"><a href="">Layang - Layang</a> | <a href="">Jajargenjang</a></div>
 					</div>
 					<a href="" class="card-tag">2 D<span class="card-tag-2">Bangun Datar</span></a>
 				</div>
-				<div class="card col-md-5 bg-light my-5 ">
+				<div data-aos="flip-left" class="card col-md-5 bg-light my-5">
 					<div class="card-image-1"></div>
 					<div class="card-info">
 						<div class="bg-black text-light py-3"><a href="">Balok</a></div>
@@ -60,7 +63,7 @@
 			</div>	
 		</div>
 	</div>
-	<div class="container-fluid text-center bg-light py-5">
+	<div id="profile" class="container-fluid text-center bg-light py-5">
 		<h1>Profile Photo</h1>
 		<div class="rounded-image row">
 			<div class="card-round bg-light m-3 ">
@@ -96,10 +99,15 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
 	<!-- Smooth Scroll -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    <script src="./assets/animatescroll.js">
+    <script src="./assets/animatescroll.js"></script>
+	<!-- AOS -->
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 	<!-- My Script -->
 	<script type="text/javascript">
 		$(document).ready(function() {
+			AOS.init({
+				offset: 200
+			});
 			$('.slider-header').slick({
 				autoplay: true,
 				slidesToShow: 1,
