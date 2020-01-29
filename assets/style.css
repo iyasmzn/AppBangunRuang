@@ -1,6 +1,7 @@
 html, body {
     height: 100%;
     margin: 0px;
+    font-size: 16px;
 }
 a { color: inherit;  }
 a:hover {
@@ -14,18 +15,30 @@ h1 {
 .bg-black {
     background: #222;
 }
+.navbar {
+    position: absolute;
+    top: 0;
+    z-index: 100;
+}
+.navbar-brand {
+    font-size: 3em;
+    font-family: 'Satisfy', cursive;
+}
+.navbar-brand:hover {
+    text-shadow: 0px 0px 5px white;
+}
 .slider-header {
     overflow: hidden;
 }
 .jumbotron {
-    height: 35vw;
+    height: 50vw;
     background-image: url('../../../dashboard/image/computer2.jpg');
     background-size: cover;
     /*position: relative;*/
 }
 .box-center {
     position: relative;
-    left: 50%;top: 5vw;
+    left: 50%;top: 8vw;
     transform: translateX(-50%);
 }
 .card {
@@ -49,14 +62,14 @@ h1 {
     transform: translate(-50%,-50%);
     font-family: 'Anton', sans-serif;
     font-size: 10em;
-    width: 60%;
     transition: all 1s;
     opacity: 0.3;
     color: white;
 }
 .card-tag-2 {
-    top: 100%;
+    top: 90%;
     font-size: 0.2em;
+    width: 100%;
 }
 .card-info {
     position: absolute;
