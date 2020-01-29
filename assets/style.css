@@ -19,6 +19,7 @@ h1 {
     position: absolute;
     top: 0;
     z-index: 100;
+    border-radius: 0px 0px 20px 20px;
 }
 .navbar-brand {
     font-size: 3em;
@@ -46,7 +47,7 @@ h1 {
     height: 35vw;
     overflow: hidden;
     position: relative;
-    border-radius: 0px;
+    border-radius: 10px;
 }
 .card-image-1 {
     position: absolute;
@@ -122,4 +123,16 @@ h1 {
     overflow: hidden;
     position: relative;
     border-radius: 150px;
+}
+/* 2D CSS */
+.datar {
+    position: relative;
+    overflow: hidden;
+    height: 35vw;
+}
+.layang {
+    position: absolute;
+    border-radius: 10px;
+    top: 0;bottom: 0;
+    width: 100%;
 }
