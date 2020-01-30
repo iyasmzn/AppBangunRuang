@@ -58,26 +58,46 @@
 					<div class="card-info">
 						<div class="bg-black text-light py-3"><a href="./ruang.html">Balok</a></div>
 					</div>
-					<a href="" class="card-tag">3 D<span class="card-tag-2">Bangun Ruang</span></a>
+					<a href="./ruang.html" class="card-tag">3 D<span class="card-tag-2">Bangun Ruang</span></a>
 				</div>
 			</div>	
 		</div>
 	</div>
-	<div id="profile" class="container-fluid text-center bg-light py-5">
-		<h1 class="my-3">Profile Photo</h1>
+	<div id="profile" class="container-fluid text-center bg-light py-5 my-5">
+		<h1 data-aos="zoom-out-up" class="my-3">Profile Photo</h1>
 		<div class="rounded-img row w-100">
-			<div class="card-round bg-light m-3 ">
+			<div data-aos="zoom-out-up" class="card-round bg-light m-3 ">
 				<a href=""><div class="card-img-3"></div></a>
 			</div>
-			<div class="card-round bg-light m-3 ">
+			<div data-aos="zoom-out-up" class="card-round bg-light m-3 ">
 				<a href=""><div class="card-img-4"></div></a>
 			</div>
-			<div class="card-round bg-light m-3 ">
+			<div data-aos="zoom-out-up" class="card-round bg-light m-3 ">
 				<a href=""><div class="card-img-5"></div></a>
 			</div>
-			<div class="card-round bg-light m-3 ">
+			<div data-aos="zoom-out-up" class="card-round bg-light m-3 ">
 				<a href=""><div class="card-img-6"></div></a>
 			</div>
+		</div>
+		<div class="mt-4 profile-desc desc-1" >
+			<b>Iyas Muzani</b><br>
+			<i class="fab fa-instagram"></i> @iyasmzn |
+			<i class="fab fa-whatsapp"></i> +62 822 2331 8719
+		</div>
+		<div class="mt-4 profile-desc desc-2" >
+			<b>Adi Pamungkas</b><br>
+			<i class="fab fa-instagram"></i> @adinepamungkas |
+			<i class="fab fa-whatsapp"></i> +62 856 0121 4330
+		</div>
+		<div class="mt-4 profile-desc desc-3" >
+			<b>Mutaafakkur</b><br>
+			<i class="fab fa-instagram"></i> @bang_fkr |
+			<i class="fab fa-whatsapp"></i> +62 819 4703 3495
+		</div>
+		<div class="mt-4 profile-desc desc-4" >
+			<b>Zoel Fahmi Syam</b><br>
+			<i class="fab fa-instagram"></i> @fahmi_syam |
+			<i class="fab fa-whatsapp"></i> +62 8822 4817 8080
 		</div>
 	</div>
 	<div class="container-fluid bg-dark py-3 text-light">
@@ -113,6 +133,30 @@
 	<!-- My Script -->
 	<script type="text/javascript">
 		$(document).ready(function() {
+			$('.card-img-3').mouseover(function() {
+				$('.desc-1').css({display : "block"});
+			})
+			$('.card-img-3').mouseout(function() {
+				$('.desc-1').css({display : "none"});
+			})
+			$('.card-img-4').mouseover(function() {
+				$('.desc-2').css({display : "block"});
+			})
+			$('.card-img-4').mouseout(function() {
+				$('.desc-2').css({display : "none"});
+			})
+			$('.card-img-5').mouseover(function() {
+				$('.desc-3').css({display : "block"});
+			})
+			$('.card-img-5').mouseout(function() {
+				$('.desc-3').css({display : "none"});
+			})
+			$('.card-img-6').mouseover(function() {
+				$('.desc-4').css({display : "block"});
+			})
+			$('.card-img-6').mouseout(function() {
+				$('.desc-4').css({display : "none"});
+			})
 			AOS.init({
 				offset: 200
 			});

@@ -38,11 +38,12 @@
 		<h1 data-aos="zoom-out-up">3D Object</h1>
 		<div>
 			<div class="row justify-content-between datar text-light my-5">
-				<div data-aos="flip-left" class="layang col-md-12 bg-dark my-5 px-0">
-					<div class="layang-image">
-						<div class="arrow arrows-left btn btn-md btn-outline-light"><i class="fas fa-arrow-right"></i></div>
+				<div data-aos="flip-left" class="balok col-md-12 bg-dark my-5 px-0">
+					<div class="balok-image">
+						<div class="arrow arrows-left btn btn-md btn-outline-light balok-arrow-right"><i class="fas fa-arrow-right"></i></div>
+						<span class="btn btn-lg btn-outline-light balok-start">Start Calculate !!</span>
 					</div>
-					<div class="layang-form p-5">
+					<div class="balok-form p-5">
 						<input type="number" name="">
 						<input type="number" name="">
 						<input type="number" name="">
@@ -86,6 +87,22 @@
 	<!-- My Script -->
 	<script type="text/javascript">
 		$(document).ready(function() {
+			$('.balok-start').click(function() {
+				$('.balok-start').css({display: "none"});
+				$('.balok-image').animate({width:"30%"});
+				$('.balok-image').css({borderRadius:"0px 50px 0px 0px"});
+				$('.balok-form').css({display:"block"});
+				$('.balok-form').animate({width:"70%"});
+				$('.balok-arrow-right').css({display:"block"});
+			})
+			$('.balok-arrow-right').click(function() {
+				$('.balok-image').animate({width:"100%"});
+				$('.balok-image').animate({borderRadius:"0px"});
+				$('.balok-form').animate({width:"0px"});
+				$('.balok-form').css({display:"none"});
+				$('.balok-arrow-right').css({display:"none"});
+				$('.balok-start').css({display: "block"});
+			});
 			AOS.init({
 				offset: 200
 			});
