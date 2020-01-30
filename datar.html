@@ -35,7 +35,7 @@
 		</ul>
 	</nav>
 	<div id="card" class="container text-center">
-		<h1 data-aos="zoom-out-up">2D Object</h1>
+		<h1 data-aos="zoom-out-left">2D Object <a class="text-muted" href="./ruang.html"><i class="fas fa-angle-double-right"></i></a></h1>
 		<div>
 			<div class="row justify-content-between datar text-light my-5">
 				<div data-aos="flip-left" class="layang col-md-12 bg-dark my-5 px-0">
@@ -43,10 +43,11 @@
 						<div class="arrow arrows-left btn btn-md btn-outline-light"><i class="fas fa-arrow-right"></i></div>
 					</div>
 					<div class="layang-form p-5">
-						<input type="number" name="">
-						<input type="number" name="">
-						<input type="number" name="">
-						<input type="number" name="">
+						<input type="number" name="d1" id="d1">
+						<input type="number" name="d2" id="d2">
+						<input type="submit" name="" onclick="filter('lyg')">
+						<span id="show"></span>
+
 					</div>
 				</div>
 				<div id="jajar" data-aos="flip-left" class="jajar col-md-12 bg-dark my-5 px-0">
@@ -57,7 +58,7 @@
 						<input type="number" name="">
 					</div>
 					<div class="jajar-image">
-						<div id="arrow" class="arrow arrows-right btn btn-md btn-outline-light"><i class="fas fa-arrow-left"></i></div>
+						<div id="arrow" class="arrow arrows-right btn btn-md btn-outline-dark"><i class="fas fa-arrow-left"></i></div>
 					</div>
 				</div>
 				<div class="choice col-md-12">
@@ -109,6 +110,7 @@
 	<!-- AOS -->
 	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 	<!-- My Script -->
+	<script type="text/javascript" src="assets/script.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function() {
 			$('.arrows-right').click(function() {

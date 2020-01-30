@@ -35,7 +35,7 @@
 		</ul>
 	</nav>
 	<div id="card" class="container text-center">
-		<h1 data-aos="zoom-out-up">3D Object</h1>
+		<h1 data-aos="zoom-out-right"><a class="text-muted" href="./datar.html"><i class="fas fa-angle-double-left"></i></a> 3D Object</h1>
 		<div>
 			<div class="row justify-content-between datar text-light my-5">
 				<div data-aos="flip-left" class="balok col-md-12 bg-dark my-5 px-0">
@@ -44,10 +44,12 @@
 						<span class="btn btn-lg btn-outline-light balok-start">Start Calculate !!</span>
 					</div>
 					<div class="balok-form p-5">
-						<input type="number" name="">
-						<input type="number" name="">
-						<input type="number" name="">
-						<input type="number" name="">
+						<input type="number" id="panjang" placeholder="tinggi">
+						<input type="number" id="lebar" placeholder="lebar">
+						<input type="number" id="tinggi" placeholder="tinggi">
+						<input type="submit" onclick="filter('blk')">
+						<hr>
+						<span id="show"></span>
 					</div>
 				</div>
 			</div>  
@@ -85,6 +87,7 @@
 	<!-- AOS -->
 	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 	<!-- My Script -->
+	<script type="text/javascript" src="assets/script.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function() {
 			$('.balok-start').click(function() {
