@@ -37,17 +37,28 @@
 	<div id="card" class="container text-center">
 		<h1 data-aos="zoom-out-left">2D Object <a class="text-muted" href="./ruang.html"><i class="fas fa-angle-double-right"></i></a></h1>
 		<div>
-			<div class="row justify-content-between datar text-light my-5">
+			<div class="row justify-content-between datar text-light my-5 text-left">
 				<div data-aos="flip-left" class="layang col-md-12 bg-dark my-5 px-0">
 					<div class="layang-image">
 						<div class="arrow arrows-left btn btn-md btn-outline-light"><i class="fas fa-arrow-right"></i></div>
 					</div>
 					<div class="layang-form p-5">
-						<input type="number" name="d1" id="d1">
-						<input type="number" name="d2" id="d2">
-						<input type="submit" name="" onclick="filter('lyg')">
-						<span id="show"></span>
-
+						<h2>Layang Layang</h2>
+						<div class="form-group row">
+							<div class="col-xs-2 mx-3">
+								<label for="d1">d1 </label>
+								<input class="form-control" type="number" name="d1" id="d1">
+							</div>	
+							<div class="col-xs-2 mx-3">
+								<label for="d2">d2 </label>
+								<input class="form-control" type="number" name="d2" id="d2">
+							</div>	
+						</div>
+						<input class="counts btn btn-lg btn-outline-info" type="submit" value="Count" onclick="filter('lyg')">
+						<div id="show">
+							<span id="show-count"></span>
+							<span class="silang"><i class="fas fa-times"></i></span>
+						</div>
 					</div>
 				</div>
 				<div id="jajar" data-aos="flip-left" class="jajar col-md-12 bg-dark my-5 px-0">
@@ -132,6 +143,15 @@
 				$('.datar').css({overflow: "hidden"});
 				$('.layang').animate({right : '-15000px'}, "slow");
 				$('.jajar').animate({left : '0px'}, "slow");
+			});
+			$('.counts').click(function() {
+				$('#show').css({display: 'block'});
+				$('#show').animate({opacity: "1"});
+				$('#show').animate({top: "0"},"fast");
+			});
+			$('.silang').click(function() {
+				$('#show').animate({opacity: "0"});
+				$('#show').delay(300).animate({top: "100%"});
 			});
 			AOS.init({
 				offset: 200

@@ -6,7 +6,7 @@ function filter(fil)
 				let d2=document.getElementById('d2').value;
 
 				let hasil=1/2*d1*d2;
-				document.getElementById('show').innerHTML=hasil;
+				document.getElementById('show-count').innerHTML=hasil;
 			}
 			else if(fil == 'blk')
 			{
@@ -15,6 +15,6 @@ function filter(fil)
 				let tinggi =document.getElementById('tinggi').value;
 
 				let vol=panjang*lebar*tinggi;
-				document.getElementById('show').innerHTML=vol;
+				document.getElementById('show-count').innerHTML=vol;
 			}
 		}
