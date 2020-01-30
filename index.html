@@ -18,17 +18,17 @@
 
 </head>
 <body>
-	<nav class="navbar navbar-expand-md justify-content-between bg-transparent text-light w-100 sticky-top">
+	<nav id="navbar" class="navbar navbar-expand-md justify-content-between bg-transparent text-light w-100">
 		<a href="./index.html" class="navbar-brand">App<span style="color: tomato"><b>Count</b></span></a>
 		<ul class="navbar-nav">
 			<li class="nav-item active">
-				<a href="" class="nav-link">HOME</a>
+				<a href="./index.html" class="nav-link">HOME</a>
 			</li>
 			<li class="nav-item dropdown">
 				<a href="#" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">SERVICES</a>
 				<div class="dropdown-menu">
-					<a href="" class="dropdown-item">Bangun Ruang ( 3D )</a>
-					<a href="" class="dropdown-item">Bangun Datar ( 2D )</a>
+					<a href="./datar.html" class="dropdown-item">Bangun Datar ( 2D )</a>
+					<a href="./ruang.html" class="dropdown-item">Bangun Ruang ( 3D )</a>
 				</div>
 			</li>
 			<a href="#profile" onclick="$('#profile').animatescroll({scrollSpeed:1700,easing:'easeInOutSine'});" class="btn btn-md btn-outline-light form-inline">About Us</a>
@@ -47,16 +47,16 @@
 		<div>
 			<div class="row justify-content-around">
 				<div data-aos="flip-left" class="card col-md-5 bg-light my-5">
-					<div class="card-image-1"></div>
+					<div class="card-img-1"></div>
 					<div class="card-info">
-						<div class="bg-black text-light py-3"><a href="#">Layang - Layang</a> | <a href="#">Jajargenjang</a></div>
+						<div class="bg-black text-light py-3"><a href="./datar.html">Layang - Layang</a> | <a href="./datar.html">Jajargenjang</a></div>
 					</div>
 					<a href="./datar.html" class="card-tag">2 D<span class="card-tag-2">Bangun Datar</span></a>
 				</div>
 				<div data-aos="flip-left" class="card col-md-5 bg-light my-5">
-					<div class="card-image-1"></div>
+					<div class="card-img-2"></div>
 					<div class="card-info">
-						<div class="bg-black text-light py-3"><a href="">Balok</a></div>
+						<div class="bg-black text-light py-3"><a href="./ruang.html">Balok</a></div>
 					</div>
 					<a href="" class="card-tag">3 D<span class="card-tag-2">Bangun Ruang</span></a>
 				</div>
@@ -65,23 +65,31 @@
 	</div>
 	<div id="profile" class="container-fluid text-center bg-light py-5">
 		<h1 class="my-3">Profile Photo</h1>
-		<div class="rounded-image row">
+		<div class="rounded-img row w-100">
 			<div class="card-round bg-light m-3 ">
-				<a href=""><div class="card-image-1"></div></a>
+				<a href=""><div class="card-img-3"></div></a>
 			</div>
 			<div class="card-round bg-light m-3 ">
-				<a href=""><div class="card-image-1"></div></a>
+				<a href=""><div class="card-img-4"></div></a>
 			</div>
 			<div class="card-round bg-light m-3 ">
-				<a href=""><div class="card-image-1"></div></a>
+				<a href=""><div class="card-img-5"></div></a>
+			</div>
+			<div class="card-round bg-light m-3 ">
+				<a href=""><div class="card-img-6"></div></a>
 			</div>
 		</div>
 	</div>
 	<div class="container-fluid bg-dark py-3 text-light">
 		<div class="container">
-			<div class="row justify-content-between">
+			<div class="footer row justify-content-between" style="font-family: 'Poppins', sans-serif; font-weight: bolder;">
 				<div>&copy; 2020 qweert</div>
-				<div><a href="">asdasd</a></div>
+				<div>
+					<a onclick="$('.navbar').animatescroll({scrollSpeed:1500,easing:'easeInOutSine'});">HOME</a> <i class="fas fa-circle"></i>
+					<a href="./datar.html">2D</a> <i class="fas fa-circle"></i>
+					<a href="./ruang.html">3D</a> <i class="fas fa-circle"></i>
+					<a href="">ABOUT US</a>
+				</div>
 			</div>
 		</div>
 	</div>	

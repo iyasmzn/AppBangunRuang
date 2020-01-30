@@ -3,10 +3,17 @@ html, body {
     margin: 0px;
     font-size: 16px;
 }
-a { color: inherit;  }
+#card {
+    overflow: hidden;
+}
+a { 
+    color: inherit;  
+    transition: all 0.3s;
+}
 a:hover {
     text-decoration: none;
     color: inherit;
+    cursor: pointer;
 }
 h1 {
     font-family: 'Alata', sans-serif;
@@ -48,14 +55,20 @@ h1 {
     overflow: hidden;
     position: relative;
     border-radius: 10px;
+    box-shadow: 0px 1px 10px black;
 }
-.card-image-1 {
+[class*='card-img'] {
     position: absolute;
+    background-size: cover;    
     top: 0;left: 0;bottom: 0;right: 0;
-    background-image: url('../../../dashboard/image/anime-original.jpg');
-    background-size: cover;
     background-position: center;
     transition: all 1s;
+}
+.card-img-1 {
+    background-image: url('https://images3.alphacoders.com/778/thumb-1920-77877.jpg');
+}
+.card-img-2 {
+    background-image: url('https://images4.alphacoders.com/172/thumb-1920-172406.jpg');
 }
 [class*='card-tag'] {
     display: block;
@@ -104,7 +117,7 @@ h1 {
     bottom: 0px;
     opacity: 1;
 } 
-.card:hover .card-image-1{
+.card:hover .card-img-1,.card:hover .card-img-2{
     transform: scale(1.4);
 }
 .card:hover .card-info {
@@ -113,7 +126,7 @@ h1 {
 .card-info a:hover {
     color: tomato;
 }
-.rounded-image {
+.rounded-img {
     display: flex;
     justify-content: center;
 }
@@ -123,6 +136,18 @@ h1 {
     overflow: hidden;
     position: relative;
     border-radius: 150px;
+}
+.card-img-3 {
+    background-image: url('https://instagram.fjog3-1.fna.fbcdn.net/v/t51.2885-19/s150x150/36149371_198425827535688_7128051050132537344_n.jpg?_nc_ht=instagram.fjog3-1.fna.fbcdn.net&_nc_cat=100&_nc_ohc=HXlI9msNJVAAX_VMDfQ&oh=0d92c5d4b19e50b35fca634e2b699218&oe=5ED47166');
+}
+.card-img-4 {
+    background-image: url('https://scontent.fjog3-1.fna.fbcdn.net/v/t1.0-1/p160x160/74698813_2220082928095572_8795908909844922368_n.jpg?_nc_cat=107&_nc_ohc=NbXC8HuzsmIAX84AtsJ&_nc_ht=scontent.fjog3-1.fna&_nc_tp=6&oh=f7a8abba6bfe8ca1f3bf67626f5e6875&oe=5EC9146E');
+}
+.card-img-5 {
+    background-image: url('https://scontent.fjog3-1.fna.fbcdn.net/v/t1.0-1/c0.0.160.160a/p160x160/80887291_822334184869233_9080590917160665088_n.jpg?_nc_cat=110&_nc_ohc=KusMQaFQt-AAX8X_1xn&_nc_ht=scontent.fjog3-1.fna&oh=f9b09ced45924ff5b4a47fc1a0986d81&oe=5E933718');
+}
+.card-img-6 {
+    background-image: url('https://instagram.fjog3-1.fna.fbcdn.net/v/t51.12442-15/e35/c0.280.720.720a/s150x150/70416480_2465550953676166_7793541022905890343_n.jpg?_nc_ht=instagram.fjog3-1.fna.fbcdn.net&_nc_cat=110&_nc_ohc=cBTj8iVeGPoAX-bz2t_&oh=bb6e6a1cd1e45c16ba60da71c14121fd&oe=5E345D4C');
 }
 /* 2D CSS */
 .datar {
@@ -138,7 +163,6 @@ h1 {
     width: 100%;
     display: flex;
     overflow: hidden;
-    transition: width 1s;
     right: -1500px;
 }
 .jajar {
@@ -156,7 +180,6 @@ h1 {
     top: 0;bottom: 0;
     width: 100%;
     display: flex;
-    transition: scale 0.5s;
     /*overflow: hidden;*/
 }
 [class*="image"] {
@@ -199,6 +222,7 @@ h1 {
     overflow: hidden;
     border-radius: 50px 50px 0 50px;
     box-shadow: 0px 0px 4px black;
+    transition: all 0.5s;
 }
 .choice-2 {
     background: url('../../../dashboard/image/background.jpg');
@@ -206,6 +230,7 @@ h1 {
     background-position: center;
     overflow: hidden;
     border-radius: 50px 50px 50px 0px;
+    transition: all 0.5s;
     box-shadow: 0px 0px 4px black;
 }
 .choice-tag {
@@ -215,7 +240,8 @@ h1 {
     font-family:     
 }
 .choice-1:hover, .choice-2:hover {
-    transform: scale(1.1);
+    transform: scale(1.03);
+    box-shadow: 0px 2px 6px black;
 }
 .choice-tag h1 {
     font-family: 'Anton', sans-serif;
@@ -224,4 +250,13 @@ h1 {
 .choice-tag h1:hover {
     color: tomato;
     cursor: pointer;
+}
+.fa-circle {
+    font-size: 0.2em;
+    vertical-align: center;
+    position: relative;
+    bottom: 3px;
+}
+.footer a:hover {
+    color: tomato;
 }
